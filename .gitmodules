@@ -10,3 +10,6 @@
 [submodule "AuthService"]
 	path = AuthService
 	url = https://github.com/xen22/AuthService.git
+[submodule "SolarMonitorGateway"]
+	path = SolarMonitorGateway
+	url = https://github.com/xen22/SolarMonitorGateway.git
