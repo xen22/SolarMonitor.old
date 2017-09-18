@@ -32,10 +32,11 @@ The diagram below shows an overview of the entire system:
 
 There are 4 components that form part of the system:
 
-1. The [SolarMonitorApi](<https://github.com/xen22/SolarMonitorApi.git>) - This is an ASP.NET Core Web.Api-based application, hosted in the cloud, which allows remote web clients to pull data related to the various solar systems registered with it.
+1. The [SolarMonitorApi](<https://github.com/xen22/SolarMonitorApi.git>) - This is an ASP.NET Core Web.Api-based application, hosted in the cloud, which provides a RESTful API allowing remote web clients to pull data related to the various solar systems registered with it.
 
 2. [AuthService](<https://github.com/xen22/AuthService.git>) - this service provides the authentication/authorization for the SolarMonitorApi.
 
 3. The [SolarMonitorGateway](<https://github.com/xen22/SolarMonitorGateway.git>) application. This runs on the individual gateway machines that are installed locally next to the solar systems. Its purpose is to communicate with the individual solar devices and sensors in order to retrieve information from them and push this data to the SolarMonitorApi server. This application was written in Go.
 
 3. SolarMonitorWebClient application. This is an SPA (ReactJS) that obtains data from the SolarMonitorApi and displays it to the user via a selection of graphs.
+
