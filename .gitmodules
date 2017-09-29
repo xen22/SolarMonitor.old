@@ -1,15 +1,20 @@
 [submodule "Common"]
 	path = Common
 	url = https://github.com/xen22/Common.git
+	branch = master
 [submodule "SolarMonitorApi"]
 	path = SolarMonitorApi
 	url = https://github.com/xen22/SolarMonitorApi.git
+	branch = master
 [submodule "Infrastructure"]
 	path = Infrastructure
 	url = https://github.com/xen22/Infrastructure.git
+	branch = master
 [submodule "AuthService"]
 	path = AuthService
 	url = https://github.com/xen22/AuthService.git
+	branch = master
 [submodule "SolarMonitorGateway"]
 	path = SolarMonitorGateway
 	url = https://github.com/xen22/SolarMonitorGateway.git
+	branch = master
