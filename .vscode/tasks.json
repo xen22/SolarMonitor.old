@@ -1,0 +1,17 @@
+{
+    "version": "2.0.0",
+    "tasks": [{
+        "label": "build",
+        "command": "dotnet",
+        "type": "process",
+        "args": [
+            "build",
+            "${workspaceFolder}/SolarMonitorApi/src/SolarMonitor.Web.Api/SolarMonitor.Web.Api.csproj"
+        ],
+        "group": {
+            "kind": "build",
+            "isDefault": true
+        },
+        "problemMatcher": "$msCompile"
+    }]
+}
