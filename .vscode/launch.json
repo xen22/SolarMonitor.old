@@ -3,6 +3,13 @@
     // Use hover for the description of the existing attributes
     // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
     "version": "0.2.0",
+    "compounds": [{
+        "name": "SolarMonitor (all services)",
+        "configurations": [
+            "AuthService",
+            "SolarMonitorApi (swagger)"
+        ]
+    }],
     "configurations": [{
             "name": "SolarMonitorApi (swagger)",
             "type": "coreclr",
@@ -39,27 +46,14 @@
             "name": "AuthService",
             "type": "coreclr",
             "request": "launch",
-            "preLaunchTask": "build",
+            // "dotnet build" is very slow even after the solution is fully built, so disable this for now.
+            //"preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
             "program": "${workspaceFolder}/AuthService/src/AuthService/bin/Debug/netcoreapp2.0/AuthService.dll",
             "args": [],
             "cwd": "${workspaceFolder}/AuthService/src/AuthService",
             "stopAtEntry": false,
             "internalConsoleOptions": "openOnSessionStart",
-            "launchBrowser": {
-                "enabled": true,
-                "args": "${auto-detect-url}",
-                "windows": {
-                    "command": "cmd.exe",
-                    "args": "/C start ${auto-detect-url}"
-                },
-                "osx": {
-                    "command": "open"
-                },
-                "linux": {
-                    "command": "xdg-open"
-                }
-            },
             "env": {
                 "ASPNETCORE_ENVIRONMENT": "Development"
             },
