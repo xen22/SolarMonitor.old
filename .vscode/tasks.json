@@ -1,17 +1,32 @@
 {
     "version": "2.0.0",
-    "tasks": [{
-        "label": "build",
-        "command": "dotnet",
-        "type": "process",
-        "args": [
-            "build",
-            "${workspaceFolder}/SolarMonitorApi/src/SolarMonitor.Web.Api/SolarMonitor.Web.Api.csproj"
-        ],
-        "group": {
-            "kind": "build",
-            "isDefault": true
+    "tasks": [
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/SolarMonitorApi/src/SolarMonitor.Web.Api/SolarMonitor.Web.Api.csproj"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": "$msCompile"
         },
-        "problemMatcher": "$msCompile"
-    }]
+        {
+            "label": "test",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "test",
+                "${workspaceFolder}/SolarMonitorApi/test/integration/SolarMonitor.Web.Api.IntegrationTests/SolarMonitor.Web.Api.IntegrationTests.csproj"
+            ],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
+        }
+    ]
 }
